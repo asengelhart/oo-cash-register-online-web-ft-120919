@@ -14,4 +14,12 @@ class CashRegister
   end 
   
   def apply_discount
+    float_discount = self.discount.to_f / 100.0 
+    self.total *= float_discount
+  end 
+  
+  def void_last_transaction
+    self.total -= self.last_purchase
+    self.item_list.pop
+  end 
 end 
