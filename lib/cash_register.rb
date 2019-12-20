@@ -12,4 +12,6 @@ class CashRegister
     self.total = self.last_purchase
     self.item_list << unit_name
   end 
+  
+  def apply_discount
 end 
